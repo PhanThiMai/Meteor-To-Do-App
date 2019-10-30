@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Tasks } from '../api/tasks.js';
 import classnames from 'classnames';
 import { Meteor } from 'meteor/meteor';
 
@@ -41,7 +40,7 @@ export default class Task extends Component {
                     onClick={this.toggleChecked}
                 />
                 {this.props.showPrivateButton ? (
-                    <button className="toggle-private" onClick={this.togglePrivate.bind(this)}>
+                    <button className="toggle-private" onClick={this.togglePrivate}>
                         {this.props.task.private ? 'Private' : 'Public'}
                     </button>
                 ) : ''}
